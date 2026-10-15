@@ -12,11 +12,15 @@
 </style>
 </head>
 <body>
-<header class="wrap nav"><a class="logo" href="#">FORJA<span>.</span></a><nav class="links" aria-label="Navegação"><a href="#metodo">Método</a><a href="#planos">Planos</a><a href="#duvidas">Dúvidas</a></nav><a class="btn" href="#planos">Ver planos</a></header>
+<header class="wrap nav"><a class="logo" href="#">FORJA<span>.</span></a><nav class="links" aria-label="Navegação"><a href="#metodo">Método</a><a href="#exercicios">Exercícios</a><a href="#planos">Planos</a><a href="#duvidas">Dúvidas</a></nav><a class="btn" href="#planos">Ver planos</a></header>
 <main>
 <div class="wrap hero"><div><div class="eyebrow">Seu próximo nível começa aqui</div><h1>Treino com propósito. <em>Resultado com consistência.</em></h1><p>Um plano de treino pensado para sua rotina, seu nível e seus objetivos — com um caminho claro para você evoluir com segurança.</p><div class="actions"><a class="btn" href="#planos">Encontrar meu plano ↗</a><a class="btn secondary" href="#metodo">Conhecer o método</a></div><p class="note">Sem fórmulas mágicas. O foco é progresso sustentável, orientação e constância.</p></div><div class="hero-img" role="img" aria-label="Academia com equipamentos de treino"><div class="img-label"><strong>FOCO NO PROCESSO</strong><span>Um treino que cabe na sua vida.</span></div></div></div>
 <section id="metodo"><div class="wrap"><div class="section-head"><div class="eyebrow">A abordagem FORJA</div><h2>Menos improviso.<br>Mais direção.</h2><p>Treinar melhor não é fazer tudo de uma vez. É ter um plano coerente, acompanhar sua evolução e ajustar o percurso quando necessário.</p></div><div class="grid"><article class="card"><div class="num">01 / PERSONALIZAÇÃO</div><h3>Feito para sua rotina</h3><p>Considere seu nível, os equipamentos disponíveis, o tempo que você tem e seus objetivos.</p></article><article class="card"><div class="num">02 / ESTRUTURA</div><h3>Plano claro</h3><p>Organize seus treinos para saber o que fazer e manter uma rotina consistente.</p></article><article class="card"><div class="num">03 / EVOLUÇÃO</div><h3>Acompanhe o progresso</h3><p>Observe seu desempenho e faça ajustes graduais, sem depender de promessas milagrosas.</p></article></div></div></section>
 <section><div class="wrap split"><div class="photo" role="img" aria-label="Pessoa treinando em academia"></div><div><div class="eyebrow">Seu ponto de partida</div><h2>Um plano possível é melhor que um plano perfeito que você não consegue seguir.</h2><p class="muted">A proposta é encaixar o treino na vida real. Você começa do seu nível atual e progride de forma gradual.</p><ul class="checks"><li>Orientação de acordo com seus objetivos</li><li>Rotina organizada por sessões</li><li>Expectativas realistas e foco na constância</li><li>Adaptações conforme disponibilidade de equipamentos</li></ul><a class="btn" href="#contato">Quero saber mais</a></div></div></section>
+
+<section id="exercicios"><div class="wrap"><div class="section-head"><div class="eyebrow">Biblioteca de exercícios</div><h2>Encontre movimentos para seu treino.</h2><p>Pesquise por exercício, grupo muscular e nível. Os dados vêm da API Ninjas; confira sempre a técnica com um profissional qualificado.</p></div>
+<div class="card" style="margin-bottom:22px"><form id="exerciseForm" class="contact-form" style="max-width:none"><label for="exerciseKey">Chave da API Ninjas</label><input id="exerciseKey" type="password" autocomplete="off" placeholder="Cole sua chave aqui — ela não será salva no site" required><p class="muted" style="margin:0">Por segurança, a chave fica apenas na memória desta página enquanto ela estiver aberta. Não a publique no código-fonte.</p><div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(180px,1fr))"><div><label for="exerciseName">Nome do exercício (opcional)</label><input id="exerciseName" placeholder="Ex.: bench press"></div><div><label for="exerciseMuscle">Grupo muscular</label><select id="exerciseMuscle"><option value="">Todos</option><option value="abdominals">Abdômen</option><option value="biceps">Bíceps</option><option value="calves">Panturrilhas</option><option value="chest">Peito</option><option value="forearms">Antebraços</option><option value="glutes">Glúteos</option><option value="hamstrings">Posteriores</option><option value="lats">Costas (dorsais)</option><option value="lower_back">Lombar</option><option value="middle_back">Meio das costas</option><option value="quadriceps">Quadríceps</option><option value="shoulders">Ombros</option><option value="traps">Trapézio</option><option value="triceps">Tríceps</option></select></div><div><label for="exerciseDifficulty">Nível</label><select id="exerciseDifficulty"><option value="">Todos</option><option value="beginner">Iniciante</option><option value="intermediate">Intermediário</option><option value="expert">Avançado</option></select></div><div><label for="exerciseType">Tipo</label><select id="exerciseType"><option value="">Todos</option><option value="strength">Força</option><option value="cardio">Cardio</option><option value="stretching">Alongamento</option><option value="plyometrics">Pliometria</option><option value="powerlifting">Powerlifting</option><option value="olympic_weightlifting">Levantamento olímpico</option><option value="strongman">Strongman</option></select></div></div><button class="btn" type="submit">Buscar exercícios</button><p id="exerciseStatus" class="form-result" aria-live="polite"></p></form></div>
+<div id="exerciseResults" class="grid" aria-live="polite"></div><p class="muted note">A API gratuita retorna até 5 resultados por busca e, segundo a documentação da API Ninjas, o uso comercial exige uma assinatura premium. Confira as condições do seu plano antes de usar esta biblioteca em uma oferta paga.</p></div></section>
 <section id="planos"><div class="wrap"><div class="section-head"><div class="eyebrow">Escolha seu caminho</div><h2>Planos para começar com clareza.</h2><p>Edite os preços e os itens abaixo antes de publicar. Estes valores são apenas espaços reservados e não representam uma oferta confirmada.</p></div><div class="grid plans"><article class="card plan"><div class="num">ESSENCIAL</div><h3>Plano de treino</h3><div class="price">R$ XX <small>/ plano</small></div><p class="muted">Para quem quer uma estrutura inicial.</p><ul><li>Questionário inicial</li><li>Organização de treinos</li><li>Orientações gerais</li></ul><a class="btn secondary" href="#contato">Tenho interesse</a></article><article class="card plan featured"><div class="num">MAIS COMPLETO</div><h3>Treino personalizado</h3><div class="price">R$ XX <small>/ mês</small></div><p class="muted">Para quem busca acompanhamento mais próximo.</p><ul><li>Plano alinhado aos objetivos</li><li>Revisões programadas</li><li>Ajustes conforme evolução</li></ul><a class="btn" href="#contato">Quero este plano</a></article><article class="card plan"><div class="num">CONTINUIDADE</div><h3>Acompanhamento</h3><div class="price">R$ XX <small>/ mês</small></div><p class="muted">Para manter a rotina e revisar o percurso.</p><ul><li>Revisão de progresso</li><li>Ajustes de planejamento</li><li>Orientação de continuidade</li></ul><a class="btn secondary" href="#contato">Tenho interesse</a></article></div></div></section>
 <section id="duvidas"><div class="wrap faq"><div class="section-head"><div class="eyebrow">Perguntas frequentes</div><h2>Antes de começar</h2></div><details><summary>Preciso já treinar?</summary><p>Não necessariamente. O plano deve considerar seu nível atual e começar com uma progressão adequada.</p></details><details><summary>O treino serve para academia e casa?</summary><p>Isso depende do plano. Informe quais equipamentos você tem para que a proposta seja compatível com sua realidade.</p></details><details><summary>Em quanto tempo vou ver resultados?</summary><p>Os resultados variam de pessoa para pessoa e dependem de diversos fatores. Não é possível garantir prazos ou resultados específicos.</p></details><details><summary>Posso treinar com dor ou lesão?</summary><p>Se você sente dor, tem uma lesão ou uma condição de saúde, procure orientação de um profissional de saúde antes de iniciar ou alterar os exercícios.</p></details></div></section>
 <section id="contato"><div class="wrap split"><div><div class="eyebrow">Vamos conversar</div><h2>Conte um pouco sobre seu objetivo.</h2><p class="muted">Preencha os campos para preparar uma mensagem. O formulário não envia nem armazena dados sozinho: ele abre o WhatsApp quando você configurar seu número abaixo.</p><p class="muted">Configure o WhatsApp no código antes de publicar a página.</p></div><form class="contact-form" id="leadForm"><label for="nome">Seu nome</label><input id="nome" name="nome" required placeholder="Como podemos te chamar?"><label for="objetivo">Objetivo principal</label><select id="objetivo" name="objetivo" required><option value="">Selecione uma opção</option><option>Ganhar força e condicionamento</option><option>Ganhar massa muscular</option><option>Melhorar a rotina de exercícios</option><option>Outro objetivo</option></select><label for="mensagem">Mais detalhes (opcional)</label><textarea id="mensagem" name="mensagem" rows="3" placeholder="Conte sua disponibilidade ou dúvidas"></textarea><button class="btn" type="submit">Preparar mensagem no WhatsApp</button><p class="form-result" id="formResult" aria-live="polite"></p></form></div></section>
@@ -24,6 +28,79 @@
 </main><footer><div class="wrap foot"><span>© <span id="year"></span> FORJA. Todos os direitos reservados.</span><span>Treine com responsabilidade e respeite seus limites.</span></div></footer>
 <script>
 document.getElementById('year').textContent = new Date().getFullYear();
+
+const exerciseForm = document.getElementById('exerciseForm');
+if (exerciseForm) {
+  let exerciseRequestId = 0;
+  exerciseForm.addEventListener('submit', async function(event) {
+    event.preventDefault();
+    const requestId = ++exerciseRequestId;
+    const apiKey = document.getElementById('exerciseKey').value.trim();
+    const status = document.getElementById('exerciseStatus');
+    const results = document.getElementById('exerciseResults');
+    const params = new URLSearchParams();
+    const name = document.getElementById('exerciseName').value.trim();
+    const muscle = document.getElementById('exerciseMuscle').value;
+    const difficulty = document.getElementById('exerciseDifficulty').value;
+    const type = document.getElementById('exerciseType').value;
+    if (name) params.set('name', name);
+    if (muscle) params.set('muscle', muscle);
+    if (difficulty) params.set('difficulty', difficulty);
+    if (type) params.set('type', type);
+    status.textContent = 'Buscando exercícios…';
+    results.replaceChildren();
+    try {
+      const response = await fetch('https://api.api-ninjas.com/v1/exercises?' + params.toString(), {
+        method: 'GET',
+        headers: { 'X-Api-Key': apiKey, 'Accept': 'application/json' }
+      });
+      if (requestId !== exerciseRequestId) return;
+      if (!response.ok) {
+        if (response.status === 401 || response.status === 403) throw new Error('A chave não foi aceita ou seu plano não permite esta consulta. Confira sua chave e assinatura.');
+        if (response.status === 429) throw new Error('Limite de consultas atingido. Tente novamente mais tarde ou confira sua cota.');
+        throw new Error('A API respondeu com erro (' + response.status + '). Confira os filtros e tente novamente.');
+      }
+      const exercises = await response.json();
+      if (!Array.isArray(exercises) || exercises.length === 0) {
+        status.textContent = 'Nenhum exercício encontrado. Tente outro grupo muscular ou termo de busca.';
+        return;
+      }
+      status.textContent = exercises.length + ' exercício(s) encontrado(s). A API retorna até 5 por consulta.';
+      exercises.forEach(function(exercise) {
+        const card = document.createElement('article');
+        card.className = 'card';
+        const title = document.createElement('h3');
+        title.textContent = exercise.name || 'Exercício';
+        const meta = document.createElement('p');
+        meta.className = 'muted';
+        meta.textContent = [exercise.muscle, exercise.difficulty, exercise.type].filter(Boolean).join(' · ');
+        const equipment = document.createElement('p');
+        equipment.style.marginTop = '12px';
+        equipment.textContent = 'Equipamentos: ' + ((exercise.equipments || []).join(', ') || 'não informado');
+        const instructionsTitle = document.createElement('strong');
+        instructionsTitle.textContent = 'Como executar';
+        instructionsTitle.style.display = 'block';
+        instructionsTitle.style.marginTop = '14px';
+        const instructions = document.createElement('p');
+        instructions.textContent = exercise.instructions || 'Instruções não disponíveis.';
+        instructions.style.color = 'var(--muted)';
+        card.append(title, meta, equipment, instructionsTitle, instructions);
+        if (exercise.safety_info) {
+          const safety = document.createElement('p');
+          safety.style.marginTop = '12px';
+          safety.style.color = 'var(--lime)';
+          safety.textContent = 'Segurança: ' + exercise.safety_info;
+          card.append(safety);
+        }
+        results.append(card);
+      });
+    } catch (error) {
+      if (requestId !== exerciseRequestId) return;
+      status.textContent = error.message || 'Não foi possível consultar a API. Verifique sua conexão.';
+    }
+  });
+}
+
 // Antes de publicar, substitua 55DDDNÚMERO pelo número com código do país e DDD, apenas dígitos.
 const WHATSAPP_NUMBER = '55DDDNÚMERO';
 document.getElementById('leadForm').addEventListener('submit', function(e){
